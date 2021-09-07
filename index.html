@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+    <div class="container">
+        <div>
+            <h3>Aggiungi uno studente:</h3>
+            <table>
+                <tr>
+                    <td>
+                        <label for="nomeStudente">nome:</label>
+                        <input type="text" name="nomeStudente" id="nomeStudente">
+                    </td>
+                    <td>
+                        <label for="cognomeStudente">cognome:</label>
+                        <input type="text" name="cognomeStudente" id="cognomeStudente">
+                    </td>
+                    <td>
+                        <label for="etaStudente">età:</label>
+                        <input type="text" name="etaStudente" id="etaStudente">
+                    </td>
+                </tr>
+            </table>
+            <button id="addStudent">aggiungi studente</button>
+        </div>
+        <h3>Classe Studenti:</h3>
+        <ul id="listOfStudents"></ul>
+    </div>
     
     <script src="./app.js"></script>
 </body>

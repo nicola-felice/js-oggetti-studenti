@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th, 
+td {
+    border: 1px black solid;
+    padding: .35rem;
+    font-size: 1.15rem;
+}
+
+input {
+    border: transparent;
+    text-align: center;
+    width: 100px;
+    font-size: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+button {
+    padding: .2rem;
+    font-size: 1rem;
+}
+
+li {
+    font-size: 1.2rem;
+}
+
+.container {
+    padding: 0 1rem;
+    height: 100vh;
+}
+#listOfStudents {
+    text-transform: capitalize;
+    margin-left: 1rem;
+}
+
+h3 {
+    margin-top: 3rem;
+    margin-bottom: .5rem;
+}

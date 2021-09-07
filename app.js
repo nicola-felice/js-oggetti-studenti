@@ -12,7 +12,6 @@ for ( let key in studente ) {
     console.log( `${key} : ${studente[key]}` );
 }
 
-console.log('---------');
 
 // Creare un array di oggetti di studenti.
 
@@ -43,18 +42,29 @@ let classe = [
 
 for ( let i = 0; i < classe.length; i++ ) {
 
-    console.log( classe[i].nome, classe[i].cognome );
+    document.querySelector("#listOfStudents").innerHTML += `<li class="student">${classe[i].nome} ${classe[i].cognome}</li>`;
 }
 
-console.log('---------');
 
-// Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+// Dare la possibilità all’utente, di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
-let newStudent = {
-    nome : prompt(`inserisci il nome`),
-    cognome : prompt(`inserisci il cognome`),
-    eta : prompt(`inserisci l' età`)
-}
+document.querySelector("#addStudent").addEventListener('click', () => {
 
-classe.push(newStudent);
-console.log(classe);
+    // save student data
+    let newStudent = {
+        nome : document.querySelector("#nomeStudente").value,
+        cognome : document.querySelector("#cognomeStudente").value,
+        eta : document.querySelector("#etaStudente").value
+    }
+
+    // add student to the class array
+    classe.push(newStudent);
+
+    // print on list of students
+    document.querySelector("#listOfStudents").innerHTML += `<li class="student">${newStudent.nome} ${newStudent.cognome}</li>`;
+
+    // clear input values
+    document.querySelector("#nomeStudente").value = "";
+    document.querySelector("#cognomeStudente").value = "";
+    document.querySelector("#etaStudente").value = "";
+});
