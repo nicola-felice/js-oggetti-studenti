@@ -102,7 +102,7 @@ document.querySelector("#addStudent").addEventListener('click', () => {
     let newStudent = {
         id : classe.length, 
         nome : document.querySelector("#nomeStudente").value,
-        cognome : document.querySelector("#cognomeStudente").value,
+        cognome : (document.querySelector("#cognomeStudente").value).toLowerCase(),
         eta : document.querySelector("#etaStudente").value
     }
 
